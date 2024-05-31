@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/tailwind.js"></script>
+    <!-- <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #app {
+            padding-top: 10px;
+            margin-top: 100px;
+            border: 4px solid black;
+            height: 450px;
+            width: 500px;
+            display: flex;
+            gap: 30px;
+            flex-direction: column;
+        }
+
+        button {
+            padding: 13px 20px 20px 13px;
+            background-color: gray;
+            font-size: 15px;
+            border: none;
+            color: white;
+            /* transition: all 0.5s ease; */
+        }
+
+        h1 {
+            font-size: 30px;
+            line-height: 1.7px;
+            text-transform: uppercase;
+            color: blue;
+        }
+
+        button:active {
+            opacity: 0.7;
+            background-color: black;
+        }
+
+        .box {
+            width: 400px;
+            height: 400px;
+            background-color: red;
+        }
+
+        .visible {
+            color: red;
+        }
+
+        .unvisible {
+            color: blue;
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            transform: translate(100%);
+            height: 100%;
+            width: 300px;
+            background-color: #222;
+            transition: all 0.3s ease;
+        }
+
+        .open-menu {
+            transform: translateX(0);
+        }
+        /* extranal style!! */
+    </style> -->
+</head>
+<!-- <button @click="remNum()">-</button>
+    <h1>{{num}}</h1>
+    <button :style="`background-color: ${color}`" @click="addNum()">+</button> -->
+
+<body>
+    <div id="app">
+        <div class="bg-white">
+            <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+                <h2 class="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
+
+                <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                    <div class="group relative">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                            <img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                                alt="Front of men&#039;s Basic Tee in black."
+                                class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                        </div>
+                        <div class="mt-4 flex justify-between">
+                            <div>
+                                <h3 class="text-sm text-gray-700">
+                                    <a href="#">
+                                        <span aria-hidden="true" class="absolute inset-0"></span>
+                                        Basic Tee
+                                    </a>
+                                </h3>
+                                <p class="mt-1 text-sm text-gray-500">Black</p>
+                            </div>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                    </div>
+                    <product-card v-for="(item,i) in products" :key="item" :product="item" ></product-card>
+                    <!-- <product-card></product-card> -->
+                    <!-- More products... -->
+                </div>
+            </div>
+            <base-btn name="click me"></base-btn>
+        </div>
+    </div>
+    <script src="./js/vue.global.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./components/productCard.js"></script>
+    <script src="./components/baseBtn.js"></script>
+    <script>
+        app.mount("#app");
+    </script>
+</body>
+
+</html>
+<!-- <div class="menu" :class="{'open-menu': show }"></div> -->
+
+<!-- <h1 :class="{'visible': show, 'unvisible': !show}" ></h1> -->
+
+<!-- <h1 :class="show ? 'visible' : '' ">Count {{count}}</h1> -->
+
+<!-- <h1 :style="{'display': show ? 'block' : 'none', color:color  }">Result{{resultCount}}</h1> -->
+<!-- <div class="box" v-if="show" ></div> -->
+<!-- <button @click="size++" >  +{{size}}</button> -->
+<!-- <button @click="color = 'red' ">change color</button> -->
+<!-- <button>show box</button> -->
+<!-- <button @click="addCount()" >add count</button> -->
